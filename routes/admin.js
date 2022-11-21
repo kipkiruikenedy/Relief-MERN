@@ -140,6 +140,21 @@ router.get("/admin/agents", middleware.ensureAdminLoggedIn, async (req,res) => {
 		res.redirect("back");
 	}
 });
+router.get("/admin/donors", middleware.ensureAdminLoggedIn, async (req,res) => {
+	try
+	{
+		const agents = await User.find({ role: "agent" });
+		res.render("admin/donors", { title: "List of agents", agents });
+	}
+	catch(err)
+	{
+		console.log(err);
+		req.flash("error", "Some error occurred on the server.")
+		res.redirect("back");
+	}
+});
+
+
 
 
 router.get("/admin/profile", middleware.ensureAdminLoggedIn, (req,res) => {
