@@ -1,11 +1,12 @@
-<div id="sidebar">
+<div id="sidebar" class="bg-success rounded shadow-lg">
 	<ul id="sidebar-nav">
 		<li>Welcome <%= currentUser.firstName %></li>
-		<li><a href="/donor/dashboard">Dashboard</a></li>
-		<li><a href="/donor/donate">Donate</a></li>
-		<li><a href="/donor/donations/pending">My Pending Donations</a></li>
-		<li><a href="/donor/donations/previous">My Previous Donations</a></li>
-		<li><a href="/donor/profile">My Profile</a></li>
-		<li><a href="/auth/logout" class="btn">Logout</a></li>
+		<li><a href="/donor/dashboard" class="text-light">Dashboard</a></li>
+		<li><a href="/donor/donate" class="text-light">Donate</a></li>
+		<li><a href="/donor/recipients" class="text-light">Recipients</a></li>
+		<li><a href="/donor/donations/pending"class="text-light" >My Pending Donations</a></li>
+		<li><a href="/donor/donations/previous" class="text-light">My Previous Donations</a></li>
+		<li><a href="/donor/profile" class="text-light">My Profile</a></li>
+		<li><a href="/auth/logout" class="btn btn-danger rounded">Logout</a></li>
 	</ul>
 </div>

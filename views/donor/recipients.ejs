@@ -1,5 +1,5 @@
 <main>
-	<%- include('../partials/adminSidebar') %>
+	<%- include('../partials/donorSidebar') %>
 	
 	<div id="main-wrapper">
 		
@@ -13,20 +13,20 @@
 				<thead>
 					<tr>
 						<th scope="col">#</th>
-						<th scope="col">Donor name</th>
+						<th scope="col">Recipient name</th>
 						<th scope="col">Email</th>
 						<th scope="col">Phone</th>
 						<th scope="col">Joined time</th>
 					</tr>
 				</thead>
 				<tbody>
-					<% for(let i=0; i<donors.length; i++) { %>
+					<% for(let i=0; i<recipients.length; i++) { %>
 						<tr>
 							<th scope="row"> <%= i+1 %> </th>
-							<td> <%= donors[i].firstName + " " + donors[i].lastName %> </td>
-							<td> <%= donors[i].email %> </td>
-							<td> <%= donors[i].phone %> </td>
-							<td> <%= donors[i].joinedTime.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short"}) %> </td>
+							<td> <%= recipients[i].firstName + " " + recipients[i].lastName %> </td>
+							<td> <%= recipients[i].email %> </td>
+							<td> <%= recipients[i].phone %> </td>
+							<td> <%= recipients[i].joinedTime.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short"}) %> </td>
 					<% } %>
 				</tbody>
 			</table>

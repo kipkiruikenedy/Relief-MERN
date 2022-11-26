@@ -21,7 +21,7 @@
 			
 			<div class="mb-2">
 				<span>Amount:</span>
-				<span><%= donation.quantity %></span>
+				<span><%= donation.amount %></span>
 			</div>
 			
 			<div class="mb-2">
@@ -54,14 +54,14 @@
 			<% if(donation.status == "assigned") { %>
 				<div class="mb-2">
 					<span>Recipient assigned:</span>
-					<span><%= donation.agent.firstName + " "  + donation.agent.lastName %></span>
+					<span><%= donation.recipient.firstName + " "  + donation.recipient.lastName %></span>
 				</div>
 			<% } %>
 			
-			<% if(donation.status == "assigned" && donation.adminToAgentMsg != "") { %>
+			<% if(donation.status == "assigned" && donation.adminTorecipientMsg != "") { %>
 				<div class="mb-2">
-					<span>Your message to Agent:</span>
-					<div class="ms-3"><%= donation.adminToAgentMsg %></div>
+					<span>Your message to recipient:</span>
+					<div class="ms-3"><%= donation.adminTorecipientMsg %></div>
 				</div>
 			<% } %>
 			

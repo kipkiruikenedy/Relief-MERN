@@ -14,10 +14,10 @@ A web application which is useful for management of food donation and collection
 
 
 ## Features
-- The system consists of three types of users: admins, donors and agents.
-- Admins: They control all the activities and accept/reject donations and select agents.
+- The system consists of three types of users: admins, donors and recipients.
+- Admins: They control all the activities and accept/reject donations and select recipients.
 - Donors: They are the driving users of the application who donate food.
-- Agents: They are responsible for collecting food from homes of food donors.
+- recipients: They are responsible for collecting food from homes of food donors.
 - Each user should have an account.
 - Every user also have a dashboard where they can view several things in short summary.
 - The application provides signup, login and logout functionalities.
@@ -32,17 +32,17 @@ A web application which is useful for management of food donation and collection
 ### Admin Features
 - Admins receive all the requests made by donors.
 - Admins can accept or reject the donation requests depending upon the details provided by a donor.
-- If accepted, admins can assign an agent to a donation for collecting donation from the donor's home.
+- If accepted, admins can assign an recipient to a donation for collecting donation from the donor's home.
 - Admins can view all the pending donations along with status.
 - Admins can view all the donations that they have received.
-- Admins can also view all the agents in the application.
+- Admins can also view all the recipients in the application.
 - Admins can update their profile.
 
-### Agent Features
-- Agents will receive notifications from admins to collect food from donor's homes.
-- Agents can mark their collection upon collection of food from donor's home.
-- Agents can also view all those food donations which have been collected by them previously.
-- Agents can update their profile.
+### recipient Features
+- recipients will receive notifications from admins to collect food from donor's homes.
+- recipients can mark their collection upon collection of food from donor's home.
+- recipients can also view all those food donations which have been collected by them previously.
+- recipients can update their profile.
 
 
 ## Technologies used

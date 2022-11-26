@@ -20,13 +20,13 @@
 					</tr>
 				</thead>
 				<tbody>
-					<% for(let i=0; i<agents.length; i++) { %>
+					<% for(let i=0; i<recipients.length; i++) { %>
 						<tr>
 							<th scope="row"> <%= i+1 %> </th>
-							<td> <%= agents[i].firstName + " " + agents[i].lastName %> </td>
-							<td> <%= agents[i].email %> </td>
-							<td> <%= agents[i].phone %> </td>
-							<td> <%= agents[i].joinedTime.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short"}) %> </td>
+							<td> <%= recipients[i].firstName + " " + recipients[i].lastName %> </td>
+							<td> <%= recipients[i].email %> </td>
+							<td> <%= recipients[i].phone %> </td>
+							<td> <%= recipients[i].joinedTime.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short"}) %> </td>
 					<% } %>
 				</tbody>
 			</table>

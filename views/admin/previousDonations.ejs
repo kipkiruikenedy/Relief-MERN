@@ -26,7 +26,7 @@
 							<th scope="row"> <%= i+1 %> </th>
 							<td> <%= previousDonations[i].donor.firstName + " " + previousDonations[i].donor.lastName %> </td>
 							<td> <%= previousDonations[i].foodType %> </td>
-							<td> <%= previousDonations[i].quantity %> </td>
+							<td> <%= previousDonations[i].amount %> </td>
 							<td class="fw-bold text-<%= previousDonations[i].status %>"> <%= previousDonations[i].status %> </td>
 							<td><a href="/admin/donation/view/<%= previousDonations[i]._id %>" class="btn">View</a></td>
 						</tr>

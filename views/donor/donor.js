@@ -88,12 +88,11 @@ router.get("/donor/profile", middleware.ensureDonorLoggedIn, (req,res) => {
 });
 
 
-
-router.get("/donor/recipients", async (req,res) => {
+router.get("/donor/recipients",middleware.ensureDonorLoggedIn, async (req,res) => {
 	try
 	{
 		const recipients = await User.find({ role: "recipient" });
-		res.render("donor/recipients", { title: "List of recipients", recipients });
+		res.render("/donor/recipients", { title: "List of recipients", recipients });
 	}
 	catch(err)
 	{
@@ -102,8 +101,6 @@ router.get("/donor/recipients", async (req,res) => {
 		res.redirect("back");
 	}
 });
-
-
 
 router.put("/donor/profile", middleware.ensureDonorLoggedIn, async (req,res) => {
 	try

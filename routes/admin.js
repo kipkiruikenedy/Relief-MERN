@@ -8,14 +8,14 @@ const Donation = require("../models/donation.js");
 router.get("/admin/dashboard", middleware.ensureAdminLoggedIn, async (req,res) => {
 	const numAdmins = await User.countDocuments({ role: "admin" });
 	const numDonors = await User.countDocuments({ role: "donor" });
-	const numAgents = await User.countDocuments({ role: "agent" });
+	const numrecipients = await User.countDocuments({ role: "recipient" });
 	const numPendingDonations = await Donation.countDocuments({ status: "pending" });
 	const numAcceptedDonations = await Donation.countDocuments({ status: "accepted" });
 	const numAssignedDonations = await Donation.countDocuments({ status: "assigned" });
 	const numCollectedDonations = await Donation.countDocuments({ status: "collected" });
 	res.render("admin/dashboard", {
 		title: "Dashboard",
-		numAdmins, numDonors, numAgents, numPendingDonations, numAcceptedDonations, numAssignedDonations, numCollectedDonations
+		numAdmins, numDonors, numrecipients, numPendingDonations, numAcceptedDonations, numAssignedDonations, numCollectedDonations
 	});
 });
 
@@ -51,7 +51,7 @@ router.get("/admin/donation/view/:donationId", middleware.ensureAdminLoggedIn, a
 	try
 	{
 		const donationId = req.params.donationId;
-		const donation = await Donation.findById(donationId).populate("donor").populate("agent");
+		const donation = await Donation.findById(donationId).populate("donor").populate("recipient");
 		res.render("admin/donation", { title: "Donation details", donation });
 	}
 	catch(err)
@@ -98,9 +98,9 @@ router.get("/admin/donation/assign/:donationId", middleware.ensureAdminLoggedIn,
 	try
 	{
 		const donationId = req.params.donationId;
-		const agents = await User.find({ role: "agent" });
+		const recipients = await User.find({ role: "recipient" });
 		const donation = await Donation.findById(donationId).populate("donor");
-		res.render("admin/assignAgent", { title: "Assign agent", donation, agents });
+		res.render("admin/assignrecipient", { title: "Assign recipient", donation, recipients });
 	}
 	catch(err)
 	{
@@ -114,8 +114,8 @@ router.post("/admin/donation/assign/:donationId", middleware.ensureAdminLoggedIn
 	try
 	{
 		const donationId = req.params.donationId;
-		const {agent, adminToAgentMsg} = req.body;
-		await Donation.findByIdAndUpdate(donationId, { status: "assigned", agent, adminToAgentMsg });
+		const {recipient, adminTorecipientMsg} = req.body;
+		await Donation.findByIdAndUpdate(donationId, { status: "assigned", recipient, adminTorecipientMsg });
 		req.flash("success", "Recipient assigned successfully");
 		res.redirect(`/admin/donation/view/${donationId}`);
 	}
@@ -127,11 +127,11 @@ router.post("/admin/donation/assign/:donationId", middleware.ensureAdminLoggedIn
 	}
 });
 
-router.get("/admin/agents", middleware.ensureAdminLoggedIn, async (req,res) => {
+router.get("/admin/recipients", async (req,res) => {
 	try
 	{
-		const agents = await User.find({ role: "agent" });
-		res.render("admin/agents", { title: "List of agents", agents });
+		const recipients = await User.find({ role: "recipient" });
+		res.render("admin/recipients", { title: "List of recipients", recipients });
 	}
 	catch(err)
 	{
@@ -143,8 +143,8 @@ router.get("/admin/agents", middleware.ensureAdminLoggedIn, async (req,res) => {
 router.get("/admin/donors", middleware.ensureAdminLoggedIn, async (req,res) => {
 	try
 	{
-		const agents = await User.find({ role: "agent" });
-		res.render("admin/donors", { title: "List of agents", agents });
+		const donors = await User.find({ role: "donor" });
+		res.render("admin/donors", { title: "List of donors", donors });
 	}
 	catch(err)
 	{

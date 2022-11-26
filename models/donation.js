@@ -6,7 +6,7 @@ const donationSchema = new mongoose.Schema({
 		ref: "users",
 		required: true
 	},
-	agent: {
+	recipient: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "users",
 	},
@@ -14,7 +14,7 @@ const donationSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	quantity: {
+	amount: {
 		type: String,
 		required: true
 	},
@@ -31,7 +31,7 @@ const donationSchema = new mongoose.Schema({
 		required: true
 	},
 	donorToAdminMsg: String,
-	adminToAgentMsg: String,
+	adminTorecipientMsg: String,
 	collectionTime: {
 		type: Date,
 	},

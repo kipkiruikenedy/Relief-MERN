@@ -87,7 +87,7 @@
     "@aws-sdk/middleware-serde" "3.208.0"
     "@aws-sdk/middleware-signing" "3.208.0"
     "@aws-sdk/middleware-stack" "3.208.0"
-    "@aws-sdk/middleware-user-agent" "3.208.0"
+    "@aws-sdk/middleware-user-recipient" "3.208.0"
     "@aws-sdk/node-config-provider" "3.209.0"
     "@aws-sdk/node-http-handler" "3.208.0"
     "@aws-sdk/protocol-http" "3.208.0"
@@ -100,8 +100,8 @@
     "@aws-sdk/util-defaults-mode-browser" "3.209.0"
     "@aws-sdk/util-defaults-mode-node" "3.209.0"
     "@aws-sdk/util-endpoints" "3.209.0"
-    "@aws-sdk/util-user-agent-browser" "3.208.0"
-    "@aws-sdk/util-user-agent-node" "3.209.0"
+    "@aws-sdk/util-user-recipient-browser" "3.208.0"
+    "@aws-sdk/util-user-recipient-node" "3.209.0"
     "@aws-sdk/util-utf8-browser" "3.188.0"
     "@aws-sdk/util-utf8-node" "3.208.0"
     tslib "^2.3.1"
@@ -125,7 +125,7 @@
     "@aws-sdk/middleware-retry" "3.209.0"
     "@aws-sdk/middleware-serde" "3.208.0"
     "@aws-sdk/middleware-stack" "3.208.0"
-    "@aws-sdk/middleware-user-agent" "3.208.0"
+    "@aws-sdk/middleware-user-recipient" "3.208.0"
     "@aws-sdk/node-config-provider" "3.209.0"
     "@aws-sdk/node-http-handler" "3.208.0"
     "@aws-sdk/protocol-http" "3.208.0"
@@ -138,8 +138,8 @@
     "@aws-sdk/util-defaults-mode-browser" "3.209.0"
     "@aws-sdk/util-defaults-mode-node" "3.209.0"
     "@aws-sdk/util-endpoints" "3.209.0"
-    "@aws-sdk/util-user-agent-browser" "3.208.0"
-    "@aws-sdk/util-user-agent-node" "3.209.0"
+    "@aws-sdk/util-user-recipient-browser" "3.208.0"
+    "@aws-sdk/util-user-recipient-node" "3.209.0"
     "@aws-sdk/util-utf8-browser" "3.188.0"
     "@aws-sdk/util-utf8-node" "3.208.0"
     tslib "^2.3.1"
@@ -163,7 +163,7 @@
     "@aws-sdk/middleware-retry" "3.209.0"
     "@aws-sdk/middleware-serde" "3.208.0"
     "@aws-sdk/middleware-stack" "3.208.0"
-    "@aws-sdk/middleware-user-agent" "3.208.0"
+    "@aws-sdk/middleware-user-recipient" "3.208.0"
     "@aws-sdk/node-config-provider" "3.209.0"
     "@aws-sdk/node-http-handler" "3.208.0"
     "@aws-sdk/protocol-http" "3.208.0"
@@ -176,8 +176,8 @@
     "@aws-sdk/util-defaults-mode-browser" "3.209.0"
     "@aws-sdk/util-defaults-mode-node" "3.209.0"
     "@aws-sdk/util-endpoints" "3.209.0"
-    "@aws-sdk/util-user-agent-browser" "3.208.0"
-    "@aws-sdk/util-user-agent-node" "3.209.0"
+    "@aws-sdk/util-user-recipient-browser" "3.208.0"
+    "@aws-sdk/util-user-recipient-node" "3.209.0"
     "@aws-sdk/util-utf8-browser" "3.188.0"
     "@aws-sdk/util-utf8-node" "3.208.0"
     tslib "^2.3.1"
@@ -204,7 +204,7 @@
     "@aws-sdk/middleware-serde" "3.208.0"
     "@aws-sdk/middleware-signing" "3.208.0"
     "@aws-sdk/middleware-stack" "3.208.0"
-    "@aws-sdk/middleware-user-agent" "3.208.0"
+    "@aws-sdk/middleware-user-recipient" "3.208.0"
     "@aws-sdk/node-config-provider" "3.209.0"
     "@aws-sdk/node-http-handler" "3.208.0"
     "@aws-sdk/protocol-http" "3.208.0"
@@ -217,8 +217,8 @@
     "@aws-sdk/util-defaults-mode-browser" "3.209.0"
     "@aws-sdk/util-defaults-mode-node" "3.209.0"
     "@aws-sdk/util-endpoints" "3.209.0"
-    "@aws-sdk/util-user-agent-browser" "3.208.0"
-    "@aws-sdk/util-user-agent-node" "3.209.0"
+    "@aws-sdk/util-user-recipient-browser" "3.208.0"
+    "@aws-sdk/util-user-recipient-node" "3.209.0"
     "@aws-sdk/util-utf8-browser" "3.188.0"
     "@aws-sdk/util-utf8-node" "3.208.0"
     fast-xml-parser "4.0.11"
@@ -482,9 +482,9 @@
   dependencies:
     tslib "^2.3.1"
 
-"@aws-sdk/middleware-user-agent@3.208.0":
+"@aws-sdk/middleware-user-recipient@3.208.0":
   version "3.208.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/middleware-user-agent/-/middleware-user-agent-3.208.0.tgz#4fe36f9ced65a487536d23b9679c549b830d7d0d"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/middleware-user-recipient/-/middleware-user-recipient-3.208.0.tgz#4fe36f9ced65a487536d23b9679c549b830d7d0d"
   integrity sha512-6RNf+TOZpiCy7xUcDSh8ji/x8ht1oAM+qIhm6hsEPLdI1cTvbPZrwowO9Y6L0J68V9OkEgLYiq77KKKYT7QQSw==
   dependencies:
     "@aws-sdk/protocol-http" "3.208.0"
@@ -699,18 +699,18 @@
   dependencies:
     tslib "^2.3.1"
 
-"@aws-sdk/util-user-agent-browser@3.208.0":
+"@aws-sdk/util-user-recipient-browser@3.208.0":
   version "3.208.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/util-user-agent-browser/-/util-user-agent-browser-3.208.0.tgz#cdc629bee35b24598017941e8d9324bd78dd5cb2"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-user-recipient-browser/-/util-user-recipient-browser-3.208.0.tgz#cdc629bee35b24598017941e8d9324bd78dd5cb2"
   integrity sha512-Z5n9Kg2pBstzzQgRymQRgb4pM0bNPLGQejB3ZmCAphaxvuTBfu2E6KO55h5WwkFHUuh0i5u2wn1BI9R66S8CgQ==
   dependencies:
     "@aws-sdk/types" "3.208.0"
     bowser "^2.11.0"
     tslib "^2.3.1"
 
-"@aws-sdk/util-user-agent-node@3.209.0":
+"@aws-sdk/util-user-recipient-node@3.209.0":
   version "3.209.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/util-user-agent-node/-/util-user-agent-node-3.209.0.tgz#551b016611453139820224aee630e2b39de34f2a"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-user-recipient-node/-/util-user-recipient-node-3.209.0.tgz#551b016611453139820224aee630e2b39de34f2a"
   integrity sha512-lWfvnSX8rckMGaalrKZmBlPW7F0QOviG7XbLffwToN4HnYUyXcZXIE4EzOQzuOvDsOUlos/xLkUj6krdIAApcA==
   dependencies:
     "@aws-sdk/node-config-provider" "3.209.0"

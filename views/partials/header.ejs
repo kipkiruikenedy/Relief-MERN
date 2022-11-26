@@ -1,21 +1,23 @@
 <header>
-	<nav class="navbar navbar-expand-sm navbar-light p-0 h-100">
-		<div class="container-fluid p-0">
-			<a class="navbar-brand text-white ps-2" href="/">RELIEF</a>
+	<nav class="navbar navbar-expand-sm bg-warning p-0 h-100">
+		<div class="container-fluid p-0 bg-warning">
+			
+			<li class="nav-item"><a class="text-decoration-none text-dark" href="/">Home</a></li>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span><i class="fas fa-bars text-white"></i></span>
 			</button>
-			<div class="collapse navbar-collapse ps-2" id="navbarSupportedContent" style="z-index: 100;">
+			<div class="collapse navbar-collapse ps-2 bg-warning" id="navbarSupportedContent" style="z-index: 100;">
 				<ul class="navbar-nav ms-auto me-3">
-					<li class="nav-item"><a class="nav-link" href="/home/about-us">About us</a></li>
-					<li class="nav-item"><a class="nav-link" href="/home/mission">Our mission</a></li>
-					<li class="nav-item"><a class="nav-link" href="/home/contact-us">Contact us</a></li>
+					
+					<li class="nav-item "><a class="nav-link " href="/home/about-us"><span class="text-dark">About us</span></a></li>
+					<li class="nav-item"><a class="nav-link" href="/home/mission"><span class="text-dark">Our mission</span></a></li>
+					<li class="nav-item"><a class="nav-link" href="/home/contact-us"><span class="text-dark">Contact us</span></a></li>
 					<% if(currentUser) { %>
 						<li class="user-icon"><%= currentUser.firstName[0] %></li>
 					<% } else { %>
-						<li class="nav-item"><a class="nav-link" href="/auth/login">Login</a></li>
-						<li class="nav-item"><a class="nav-link" href="/auth/signup">Signup</a></li>
+						<li class="nav-item"><a class="nav-link" href="/auth/login"><span class="text-dark">Login</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="/auth/signup"><span class="text-dark">Signup</span></a></li>
 					<% } %>
 				</ul>
 			</div>

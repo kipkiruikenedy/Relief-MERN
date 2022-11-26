@@ -1,5 +1,5 @@
 <main>
-	<%- include('../partials/agentSidebar') %>
+	<%- include('../partials/recipientSidebar') %>
 	
 	<div id="main-wrapper">
 		
@@ -8,17 +8,17 @@
 			<h5 class="m-0 color-theme d-inline-block">Profile</h5>
 		</div>
 		
-		<form action="/agent/profile?_method=PUT" method="POST" class="w-75 border ms-3 my-3 p-4 bg-white rounded-2 shadow" style="min-width: 400px;">
+		<form action="/recipient/profile?_method=PUT" method="POST" class="w-75 border ms-3 my-3 p-4 bg-white rounded-2 shadow" style="min-width: 400px;">
 			
 			<div class="row">
 				<div class="col-sm-6 mb-4">
 					<label for="first-name" class="form-label">First Name</label>
-					<input type="text" name="agent[firstName]" class="form-control" id="first-name" placeholder="Enter first name.." value="<%= currentUser.firstName %>" required>
+					<input type="text" name="recipient[firstName]" class="form-control" id="first-name" placeholder="Enter first name.." value="<%= currentUser.firstName %>" required>
 				</div>
 				
 				<div class="col-sm-6 mb-4">
 					<label for="last-name" class="form-label">Last Name</label>
-					<input type="text" name="agent[lastName]" class="form-control" id="last-name" placeholder="Enter last name.." value="<%= currentUser.lastName %>" required>
+					<input type="text" name="recipient[lastName]" class="form-control" id="last-name" placeholder="Enter last name.." value="<%= currentUser.lastName %>" required>
 				</div>
 			</div>
 			
@@ -31,23 +31,23 @@
 			<div class="mb-4">
 				<span class="d-inline-block me-2">Gender:</span>
 				<div class="form-check form-check-inline">
-					<input class="form-check-input" type="radio" name="agent[gender]" id="male" value="male" <% if(currentUser.gender=='male'){%> checked <%}%> >
+					<input class="form-check-input" type="radio" name="recipient[gender]" id="male" value="male" <% if(currentUser.gender=='male'){%> checked <%}%> >
 					<label class="form-check-label" for="male">Male</label>
 				</div>
 				<div class="form-check form-check-inline">
-					<input class="form-check-input" type="radio" name="agent[gender]" id="female" value="female" <% if(currentUser.gender=='female'){%> checked <%}%> >
+					<input class="form-check-input" type="radio" name="recipient[gender]" id="female" value="female" <% if(currentUser.gender=='female'){%> checked <%}%> >
 					<label class="form-check-label" for="female">Female</label>
 				</div>
 			</div>
 			
 			<div class="mb-4">
 				<label for="address" class="form-label">Address</label>
-				<input type="text" name="agent[address]" class="form-control" id="address" placeholder="Enter address.." value="<%= currentUser.address %>">
+				<input type="text" name="recipient[address]" class="form-control" id="address" placeholder="Enter address.." value="<%= currentUser.address %>">
 			</div>
 			
 			<div class="mb-4">
 				<label for="phone" class="form-label">Phone</label>
-				<input type="number" name="agent[phone]" class="form-control" id="phone" placeholder="Enter phone.." value="<%= currentUser.phone %>">
+				<input type="number" name="recipient[phone]" class="form-control" id="phone" placeholder="Enter phone.." value="<%= currentUser.phone %>">
 			</div>
 			
 			<button type="submit" class="btn w-75 d-block m-auto mt-4">Update</button>

@@ -1,5 +1,5 @@
 <main>
-	<%- include('../partials/agentSidebar') %>
+	<%- include('../partials/recipientSidebar') %>
 	
 	<div id="main-wrapper">
 		
@@ -26,7 +26,7 @@
 							<td> <%= previousCollections[i].donor.firstName + " " + previousCollections[i].donor.lastName %> </td>
 							<td> <%= previousCollections[i].address %> </td>
 							<td> <%= previousCollections[i].phone %> </td>
-							<td><a href="/agent/collection/view/<%= previousCollections[i]._id %>" class="btn">View</a></td>
+							<td><a href="/recipient/collection/view/<%= previousCollections[i]._id %>" class="btn">View</a></td>
 						</tr>
 					<% } %>
 				</tbody>
